@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://4bolfd1075xf"]
+
+[ext_resource type="Script" uid="uid://cyc41wvjpfval" path="res://ui/end_menu.gd" id="1_bt575"]
+
+[node name="EndMenu" type="Control" unique_id=669941744]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bt575")
+
+[node name="Panel" type="Panel" parent="." unique_id=1459893272]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1424547586]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Panel/MarginContainer" unique_id=1929465834]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer" unique_id=1364604731]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer/VBoxContainer" unique_id=286868366]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer3" unique_id=1484019001]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "End"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer/VBoxContainer" unique_id=38904425]
+layout_mode = 2
+
+[node name="RestartButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2" unique_id=1819972539]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Restart"
+
+[node name="QuitButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2" unique_id=533291607]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Quit Game"

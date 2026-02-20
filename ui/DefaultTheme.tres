@@ -1,0 +1,52 @@
+[gd_resource type="Theme" format=3 uid="uid://sn7rphs2juvi"]
+
+[ext_resource type="FontFile" uid="uid://cnte6wmem5bo2" path="res://assets/fonts/PixelOperator8.ttf" id="1_c8k34"]
+[ext_resource type="Texture2D" uid="uid://5f4ymbvqd3cu" path="res://assets/player/background.png" id="2_t0710"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nbat1"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.2051174, 0.20511746, 0.20511732, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c8k34"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t0710"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d3r0c"]
+texture = ExtResource("2_t0710")
+
+[resource]
+Button/fonts/font = ExtResource("1_c8k34")
+Button/styles/hover = SubResource("StyleBoxFlat_nbat1")
+Button/styles/normal = SubResource("StyleBoxFlat_c8k34")
+Button/styles/pressed = SubResource("StyleBoxFlat_t0710")
+Label/font_sizes/font_size = 16
+MarginContainer/constants/margin_bottom = 16
+MarginContainer/constants/margin_left = 16
+MarginContainer/constants/margin_right = 16
+MarginContainer/constants/margin_top = 16
+Panel/styles/panel = SubResource("StyleBoxTexture_d3r0c")
+VBoxContainer/constants/separation = 16

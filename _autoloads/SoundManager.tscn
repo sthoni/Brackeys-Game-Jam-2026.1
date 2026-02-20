@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bc4xt8dbn7w2g"]
+
+[ext_resource type="Script" uid="uid://c46iwhhwjlalb" path="res://_autoloads/sound_manager.gd" id="1_o7edi"]
+
+[node name="SoundManager" type="Node" unique_id=923906715]
+script = ExtResource("1_o7edi")
+
+[node name="SFXPool_1" type="AudioStreamPlayer" parent="." unique_id=242891169]
+
+[node name="SFXPool_2" type="AudioStreamPlayer" parent="." unique_id=1539354830]
+
+[node name="SFXPool_3" type="AudioStreamPlayer" parent="." unique_id=2088119207]
+
+[node name="SFXPool_4" type="AudioStreamPlayer" parent="." unique_id=465410226]
+
+[node name="SFXPool_5" type="AudioStreamPlayer" parent="." unique_id=639051583]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=337843205]
