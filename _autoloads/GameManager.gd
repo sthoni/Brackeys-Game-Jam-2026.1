@@ -24,7 +24,7 @@ func _ready() -> void:
 	elif get_tree().current_scene == GameScenes[GameState.IN_GAME]:
 		current_game_state = GameState.IN_GAME
 	game_state_changed.emit(current_game_state)
-	SoundManager.play_music(load("res://assets/music/theme.wav"))
+	# SoundManager.play_music(load("res://assets/music/theme.wav"))
 
 
 func _process(_delta: float) -> void:

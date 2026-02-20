@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5kaix1e8owld"]
+[gd_scene format=3 uid="uid://c5kaix1e8owld"]
 
 [ext_resource type="Script" uid="uid://dp8jeacwvtmh4" path="res://ui/main_menu.gd" id="1_b00nv"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1477814482]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b00nv")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=2115039743]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,7 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=1799625635]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,34 +27,34 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/MarginContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="Panel/MarginContainer" unique_id=813060347]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer" unique_id=1330666672]
 layout_mode = 2
 theme_override_constants/separation = 64
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer/VBoxContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer/VBoxContainer" unique_id=1116440930]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer3"]
+[node name="Title" type="Label" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer3" unique_id=1240867372]
 layout_mode = 2
 theme_override_font_sizes/font_size = 28
 text = "Jam Template 2025"
 
-[node name="Subtitle" type="Label" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer3"]
+[node name="Subtitle" type="Label" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer3" unique_id=582063322]
 layout_mode = 2
 text = "Fail fast! Have fun!"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer/VBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer/VBoxContainer" unique_id=1193535057]
 layout_mode = 2
 
-[node name="StartButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+[node name="StartButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2" unique_id=1451187953]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Start Game"
 
-[node name="QuitButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2"]
+[node name="QuitButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2" unique_id=1918934854]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit Game"

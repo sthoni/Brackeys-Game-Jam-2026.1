@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://3vvdmbuojly4"]
 
-[ext_resource type="Script" uid="uid://bsmmbox888ut8" path="res://_autoloads/debug_menu.gd" id="1_uxeaf"]
+[ext_resource type="Script" uid="uid://bsmmbox888ut8" path="res://_autoloads/debug_menu.gd" id="1_gsari"]
 
 [sub_resource type="SystemFont" id="SystemFont_gsari"]
 font_names = PackedStringArray("Open Sans")
@@ -8,11 +8,11 @@ font_names = PackedStringArray("Open Sans")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsari"]
 bg_color = Color(0.003921569, 0.003921569, 0.003921569, 0.36078432)
 
-[node name="DebugMenu" type="CanvasLayer"]
+[node name="DebugMenu" type="CanvasLayer" unique_id=1781352877]
 visible = false
-script = ExtResource("1_uxeaf")
+script = ExtResource("1_gsari")
 
-[node name="DebugLabel" type="RichTextLabel" parent="."]
+[node name="DebugLabel" type="RichTextLabel" parent="." unique_id=702880072]
 unique_name_in_owner = true
 offset_right = 640.0
 offset_bottom = 132.0
