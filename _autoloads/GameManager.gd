@@ -3,7 +3,6 @@ extends Node
 enum GameState {
 	MAIN_MENU,
 	IN_GAME,
-	PAUSED,
 	GAME_OVER
 }
 

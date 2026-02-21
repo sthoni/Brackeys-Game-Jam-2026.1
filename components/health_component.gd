@@ -1,6 +1,6 @@
 class_name HealthComponent extends Node
 
-signal death
+signal health_depleted
 signal health_changed
 
 var current_health: int:
@@ -10,7 +10,7 @@ var current_health: int:
 		current_health = value
 		emit_signal("health_changed", current_health)
 		if current_health <= 0:
-			emit_signal("death")
+			emit_signal("health_depleted")
 
 func init_health(max_health: int) -> void:
 	current_health = max_health

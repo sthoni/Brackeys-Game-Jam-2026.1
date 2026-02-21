@@ -10,14 +10,13 @@
 - [ ] Player-Sprite
 - [ ] Enemy-Sprite
 - [x] Licht-Sprite
-- [ ] Ziel-Sprite
-- [ ] Schalter-Sprite
+- [x] Ziel-Sprite
+- [x] Schalter-Sprite
 - [ ] Erstes Level
 - [x] Lebenspunkte
 - [ ] Langsamer laufen, wenn weniger Lebenspunkte
-- [ ] Schaden durch Gegner
+- [x] Schaden durch Gegner
 - [ ] Hindernisse
-- [ ] Safe-Lampen
 - [ ] Wechsel zum zweiten Level
 - [ ] Erklärung
 - [ ] Steuerung-Anweisung
@@ -25,9 +24,9 @@
 - [ ] Sprinten
 - [ ] Dunkel werden, wenn ins Level starten
 - [ ] Start-Bildschirm
-- [ ] Pause entfernen
+- [x] Pause entfernen
 - [ ] End-Bildschirm
-- [ ] Upload itch.io
+- [x] Upload itch.io
 - [ ] itch.io-Seite
 - [ ] Screenshots
 - [ ] Tutorial
@@ -38,3 +37,4 @@
 - Kampfsystem (Waffen mit wenig Munition)
 - Power-Ups (Blendgranate, bessere Taschenlampe)
 - Mehr Gegnertypen
+- Safe-Lampen

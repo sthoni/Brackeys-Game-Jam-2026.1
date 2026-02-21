@@ -19,6 +19,7 @@ metadata/_custom_type_script = "uid://d318oo0wxt7af"
 size = Vector2(10, 10)
 
 [node name="Player" type="CharacterBody2D" unique_id=288240515 groups=["player"]]
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_co8tj")
 stats = SubResource("Resource_spk73")
@@ -26,7 +27,6 @@ stats = SubResource("Resource_spk73")
 [node name="Hurtbox" parent="." unique_id=1639126549 node_paths=PackedStringArray("health_component") instance=ExtResource("3_7yxkc")]
 unique_name_in_owner = true
 collision_layer = 32
-collision_mask = 0
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hurtbox" unique_id=2027043864]

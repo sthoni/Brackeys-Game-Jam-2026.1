@@ -36,6 +36,7 @@ func _ready() -> void:
 			in_darkness = false
 	)
 	hurtbox.body_entered.connect(func(body: Node2D) -> void:
+		print(body)
 		if body is Player:
 			can_attack = true
 	)
@@ -85,5 +86,4 @@ func attack() -> void:
 	attack_hitbox.position = moveset.offset
 	SoundManager.play_sfx(moveset.sound, 0.9)
 	await get_tree().create_timer(moveset.attack_duration).timeout
-	if is_instance_valid(attack):
-		attack_hitbox.queue_free()
+	attack_hitbox.queue_free()

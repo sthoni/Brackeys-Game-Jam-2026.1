@@ -13,7 +13,6 @@ func _ready() -> void:
 	speed = stats.base_speed
 	stamina = stats.base_stamina
 	hurtbox.area_entered.connect(func(area: Area2D) -> void:
-		print(area)
 		if area is ExitArea:
 			is_on_exit = true
 	)
@@ -23,6 +22,9 @@ func _ready() -> void:
 	)
 	health_component.health_changed.connect(func(health: int) -> void:
 		SignalBus.emit_signal("player_stats_changed", health, stamina)
+	)
+	health_component.health_depleted.connect(func() -> void:
+		die()
 	)
 
 func get_input() -> void:
@@ -40,5 +42,8 @@ func _physics_process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if is_on_exit and event.is_action_pressed("interact"):
-		print('Hallo')
+		SoundManager.play_sfx(preload("res://assets/sfx/teleport.wav"), 1.0)
 		GameManager.change_scene(preload("res://ui/EndMenu.tscn"))
+
+func die() -> void:
+	GameManager.reload_scene()
