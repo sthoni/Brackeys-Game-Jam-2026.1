@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dli4djigrbink"]
+
+[ext_resource type="Script" uid="uid://b4ms1ksadvnjx" path="res://entities/Level/exit_area.gd" id="1_v766n"]
+[ext_resource type="Texture2D" uid="uid://b2if3ypviexed" path="res://assets/graphics/2d_lights_and_shadows_neutral_point_light.webp" id="2_ucsde"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rccsh"]
+
+[node name="ExitArea" type="Area2D" unique_id=190963240]
+collision_mask = 0
+script = ExtResource("1_v766n")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1208298392]
+texture = ExtResource("2_ucsde")
+texture_scale = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1202071832]
+shape = SubResource("RectangleShape2D_rccsh")

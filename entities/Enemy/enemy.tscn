@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://3qf48mygy3fw"]
+
+[ext_resource type="Script" uid="uid://4c4a0bscw8bd" path="res://entities/Enemy/enemy.gd" id="1_4a34c"]
+[ext_resource type="Texture2D" uid="uid://bet3wuiw4nwei" path="res://icon.svg" id="2_mwd7m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qegb"]
+size = Vector2(10, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_faw0r"]
+radius = 120.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2eouu"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1181179293]
+script = ExtResource("1_4a34c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=269773094]
+shape = SubResource("RectangleShape2D_4qegb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2108944172]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_mwd7m")
+
+[node name="AttentionArea" type="Area2D" parent="." unique_id=232752587]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttentionArea" unique_id=2047009533]
+shape = SubResource("CircleShape2D_faw0r")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1791270315]
+unique_name_in_owner = true
+collision_layer = 64
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=293673433]
+shape = SubResource("RectangleShape2D_2eouu")
+
+[node name="Raycasts" type="Node2D" parent="." unique_id=132812432]
+unique_name_in_owner = true
+
+[node name="RayCast2D" type="RayCast2D" parent="Raycasts" unique_id=469801469]
+exclude_parent = false
+target_position = Vector2(10, -10)
+
+[node name="RayCast2D2" type="RayCast2D" parent="Raycasts" unique_id=1403817116]
+target_position = Vector2(10, 10)
+
+[node name="RayCast2D3" type="RayCast2D" parent="Raycasts" unique_id=2129237677]
+target_position = Vector2(23, 6)
+
+[node name="RayCast2D4" type="RayCast2D" parent="Raycasts" unique_id=405040744]
+target_position = Vector2(23, -6)

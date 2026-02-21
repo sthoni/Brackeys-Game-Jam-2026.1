@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://00sy1c2ar7r0"]
+
+[ext_resource type="Script" uid="uid://cd2ims6ediyc3" path="res://entities/Player/player.gd" id="1_co8tj"]
+[ext_resource type="PackedScene" uid="uid://cid3qaobs3ypt" path="res://components/GameCamera.tscn" id="2_xbwyr"]
+[ext_resource type="Texture2D" uid="uid://bet3wuiw4nwei" path="res://icon.svg" id="3_en1of"]
+[ext_resource type="Texture2D" uid="uid://b2if3ypviexed" path="res://assets/graphics/2d_lights_and_shadows_neutral_point_light.webp" id="4_cwk4n"]
+[ext_resource type="PackedScene" uid="uid://dnkrepyyxlmt6" path="res://components/Flashlight.tscn" id="5_7revk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ax7ne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kl8ac"]
+size = Vector2(10, 10)
+
+[node name="Player" type="CharacterBody2D" unique_id=288240515 groups=["player"]]
+motion_mode = 1
+script = ExtResource("1_co8tj")
+speed = 50.0
+
+[node name="Hitbox2" type="Area2D" parent="." unique_id=2137171980]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox2" unique_id=2027043864]
+shape = SubResource("RectangleShape2D_ax7ne")
+
+[node name="GameCamera" parent="." unique_id=1710627335 instance=ExtResource("2_xbwyr")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=767579194]
+shape = SubResource("RectangleShape2D_kl8ac")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=526523245]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("3_en1of")
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1740131628]
+scale = Vector2(0.2, 0.2)
+shadow_enabled = true
+texture = ExtResource("4_cwk4n")
+
+[node name="Flashlight" parent="." unique_id=1885884908 instance=ExtResource("5_7revk")]
