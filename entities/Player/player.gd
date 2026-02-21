@@ -21,6 +21,7 @@ func get_input() -> void:
 	var input_direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = input_direction * speed
 
+# TODO: Taschenlampen-Logik in Komponente und geschmeidig machen
 func rotate_to_mouse(delta: float) -> void:
 	rotation += get_angle_to(get_global_mouse_position()) * 3.0 * delta
 

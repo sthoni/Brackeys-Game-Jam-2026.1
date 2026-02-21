@@ -10,6 +10,7 @@ collision_mask = 0
 script = ExtResource("1_v766n")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1208298392]
+shadow_enabled = true
 texture = ExtResource("2_ucsde")
 texture_scale = 0.5
 

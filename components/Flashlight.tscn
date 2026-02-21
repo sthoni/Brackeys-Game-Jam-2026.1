@@ -9,6 +9,7 @@ collision_mask = 0
 script = ExtResource("1_0wgtv")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1534301651]
+unique_name_in_owner = true
 rotation = 1.5707964
 shadow_enabled = true
 shadow_color = Color(0.37036464, 0.37036443, 0.37036446, 0)
