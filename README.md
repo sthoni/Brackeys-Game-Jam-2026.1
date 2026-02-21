@@ -5,31 +5,31 @@
 - [ ] Musik
 - [ ] Sounds Enemy
 - [ ] Sounds Player
-- [ ] Enemy und Player Particle
 - [x] Wand-Sprites
 - [ ] Player-Sprite
 - [ ] Enemy-Sprite
 - [x] Licht-Sprite
 - [x] Ziel-Sprite
 - [x] Schalter-Sprite
-- [ ] Erstes Level
+- [x] Erstes Level
 - [x] Lebenspunkte
-- [ ] Langsamer laufen, wenn weniger Lebenspunkte
+- [x] Langsamer laufen, wenn weniger Lebenspunkte
 - [x] Schaden durch Gegner
 - [ ] Hindernisse
 - [ ] Wechsel zum zweiten Level
-- [ ] Erklärung
-- [ ] Steuerung-Anweisung
-- [ ] UI für Leben, Ausdauer und evtl. Batterie
-- [ ] Sprinten
+- [ ] UI für Leben und Batterie
 - [ ] Dunkel werden, wenn ins Level starten
 - [ ] Start-Bildschirm
 - [x] Pause entfernen
 - [ ] End-Bildschirm
 - [x] Upload itch.io
+
+Sonntag
+
+- [ ] Erklärung
 - [ ] itch.io-Seite
 - [ ] Screenshots
-- [ ] Tutorial
+- [ ] Steuerung-Anweisung
 
 ## Stretch-Goals
 
@@ -38,3 +38,4 @@
 - Power-Ups (Blendgranate, bessere Taschenlampe)
 - Mehr Gegnertypen
 - Safe-Lampen
+- Sprinten

@@ -39,11 +39,12 @@ corner_radius_bottom_left = 4
 texture = ExtResource("2_t0710")
 
 [resource]
+default_font_size = 8
 Button/fonts/font = ExtResource("1_c8k34")
 Button/styles/hover = SubResource("StyleBoxFlat_nbat1")
 Button/styles/normal = SubResource("StyleBoxFlat_c8k34")
 Button/styles/pressed = SubResource("StyleBoxFlat_t0710")
-Label/font_sizes/font_size = 16
+Label/font_sizes/font_size = 12
 MarginContainer/constants/margin_bottom = 16
 MarginContainer/constants/margin_left = 16
 MarginContainer/constants/margin_right = 16

@@ -33,6 +33,8 @@ health_component = NodePath("../HealthComponent")
 shape = SubResource("RectangleShape2D_ax7ne")
 
 [node name="GameCamera" parent="." unique_id=1710627335 instance=ExtResource("2_xbwyr")]
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=767579194]
 shape = SubResource("RectangleShape2D_kl8ac")

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dbrgobckeje6e"]
+
+[ext_resource type="Script" uid="uid://b6uux5atwpvf" path="res://entities/Level/interactable_area.gd" id="1_sr3wn"]
+
+[node name="InteractableArea" type="Area2D" unique_id=551381228]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_sr3wn")
+
+[node name="Label" type="Label" parent="." unique_id=945156317]
+unique_name_in_owner = true
+visible = false
+offset_left = -15.0
+offset_top = -19.0
+offset_right = 32.0
+offset_bottom = -6.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 6
+text = "Press F"

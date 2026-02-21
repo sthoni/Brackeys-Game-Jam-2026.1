@@ -27,34 +27,38 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="Panel/MarginContainer" unique_id=813060347]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1330666672]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer" unique_id=1330666672]
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1116440930]
 layout_mode = 2
-theme_override_constants/separation = 64
+theme_override_constants/separation = 8
 
-[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer/VBoxContainer" unique_id=1116440930]
+[node name="Title" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer3" unique_id=1240867372]
 layout_mode = 2
+text = "Lumen Noctis"
 
-[node name="Title" type="Label" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer3" unique_id=1240867372]
+[node name="Subtitle" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer3" unique_id=582063322]
 layout_mode = 2
-theme_override_font_sizes/font_size = 28
-text = "Jam Template 2025"
+theme_override_font_sizes/font_size = 10
+text = "Light the darkness!"
 
-[node name="Subtitle" type="Label" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer3" unique_id=582063322]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1193535057]
 layout_mode = 2
-text = "Fail fast! Have fun!"
+theme_override_constants/separation = 8
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/MarginContainer/CenterContainer/VBoxContainer" unique_id=1193535057]
-layout_mode = 2
-
-[node name="StartButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2" unique_id=1451187953]
+[node name="StartButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1451187953]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Start Game"
 
-[node name="QuitButton" type="Button" parent="Panel/MarginContainer/CenterContainer/VBoxContainer/VBoxContainer2" unique_id=1918934854]
+[node name="ControlsButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=536755295]
+layout_mode = 2
+text = "Controls"
+
+[node name="QuitButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1918934854]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit Game"
