@@ -3,10 +3,10 @@
 ## TODO
 
 - [ ] Musik
-- [ ] Sounds Enemy
-- [ ] Sounds Player
+- [x] Sounds Enemy
+- [x] Sounds Player
 - [x] Wand-Sprites
-- [ ] Player-Sprite
+- [x] Player-Sprite
 - [ ] Enemy-Sprite
 - [x] Licht-Sprite
 - [x] Ziel-Sprite
@@ -18,15 +18,14 @@
 - [ ] Hindernisse
 - [ ] Wechsel zum zweiten Level
 - [ ] UI für Leben und Batterie
-- [ ] Dunkel werden, wenn ins Level starten
-- [ ] Start-Bildschirm
 - [x] Pause entfernen
-- [ ] End-Bildschirm
 - [x] Upload itch.io
 
 Sonntag
 
 - [ ] Erklärung
+- [ ] Start-Bildschirm
+- [ ] End-Bildschirm
 - [ ] itch.io-Seite
 - [ ] Screenshots
 - [ ] Steuerung-Anweisung

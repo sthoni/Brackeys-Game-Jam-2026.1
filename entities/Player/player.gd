@@ -6,6 +6,7 @@ var stamina: float
 
 @onready var health_component: HealthComponent = %HealthComponent
 @onready var hurtbox: Area2D = %Hurtbox
+@onready var audio: AudioStreamPlayer2D = %AudioStreamPlayer2D
 
 func _ready() -> void:
 	health_component.init_health(stats.max_health)
@@ -30,6 +31,9 @@ func rotate_to_mouse(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	get_input()
 	rotate_to_mouse(delta)
+	if velocity.length() > 0.0 and not audio.playing:
+		audio.pitch_scale = randf_range(0.6, 1.1)
+		audio.play()
 	move_and_slide()
 
 func die() -> void:

@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://4c4a0bscw8bd" path="res://entities/Enemy/enemy.gd" id="1_boy45"]
 [ext_resource type="Script" uid="uid://by7a8pb8ue38i" path="res://resources/enemy_stats.gd" id="2_qtvnq"]
 [ext_resource type="Resource" uid="uid://cn1krpe3v86ax" path="res://resources/attacks/base_attack.tres" id="3_7twge"]
-[ext_resource type="Texture2D" uid="uid://bet3wuiw4nwei" path="res://icon.svg" id="4_6f8ix"]
+[ext_resource type="Texture2D" uid="uid://ch5mtarxh6h5b" path="res://assets/graphics/enemy.png" id="4_qtvnq"]
 [ext_resource type="PackedScene" uid="uid://dy4wrk0i4v75m" path="res://components/Hurtbox.tscn" id="5_3hsig"]
 [ext_resource type="PackedScene" uid="uid://mvh67gamvh60" path="res://components/HealthComponent.tscn" id="6_uye3c"]
+[ext_resource type="AudioStream" uid="uid://bmckl3hi8p77h" path="res://assets/sfx/step_enemy.wav" id="7_qtvnq"]
 
 [sub_resource type="Resource" id="Resource_b6rq0"]
 script = ExtResource("2_qtvnq")
@@ -18,6 +19,7 @@ size = Vector2(10, 10)
 radius = 120.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2eouu"]
+size = Vector2(15, 14)
 
 [node name="Enemy" type="CharacterBody2D" unique_id=1181179293]
 script = ExtResource("1_boy45")
@@ -29,8 +31,7 @@ shape = SubResource("RectangleShape2D_4qegb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2108944172]
 modulate = Color(1, 0, 0, 1)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_6f8ix")
+texture = ExtResource("4_qtvnq")
 
 [node name="AttentionArea" type="Area2D" parent="." unique_id=232752587]
 unique_name_in_owner = true
@@ -63,6 +64,12 @@ collision_mask = 18
 health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=293673433]
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_2eouu")
 
 [node name="HealthComponent" parent="." unique_id=1837511731 instance=ExtResource("6_uye3c")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=616920846]
+unique_name_in_owner = true
+stream = ExtResource("7_qtvnq")
+max_distance = 200.0

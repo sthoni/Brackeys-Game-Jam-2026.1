@@ -4,10 +4,11 @@
 [ext_resource type="Script" uid="uid://d318oo0wxt7af" path="res://resources/character_stats.gd" id="2_7yxkc"]
 [ext_resource type="PackedScene" uid="uid://cid3qaobs3ypt" path="res://components/GameCamera.tscn" id="2_xbwyr"]
 [ext_resource type="PackedScene" uid="uid://dy4wrk0i4v75m" path="res://components/Hurtbox.tscn" id="3_7yxkc"]
-[ext_resource type="Texture2D" uid="uid://bet3wuiw4nwei" path="res://icon.svg" id="3_en1of"]
 [ext_resource type="Texture2D" uid="uid://b2if3ypviexed" path="res://assets/graphics/2d_lights_and_shadows_neutral_point_light.webp" id="4_cwk4n"]
 [ext_resource type="PackedScene" uid="uid://dnkrepyyxlmt6" path="res://components/Flashlight.tscn" id="5_7revk"]
+[ext_resource type="Texture2D" uid="uid://cnf2yte34ele0" path="res://assets/graphics/player.png" id="5_spk73"]
 [ext_resource type="Script" uid="uid://cpiynq2d0sqkv" path="res://components/health_component.gd" id="6_6jj1d"]
+[ext_resource type="AudioStream" uid="uid://bjr6qlb2snmn" path="res://assets/sfx/step.wav" id="9_spk73"]
 
 [sub_resource type="Resource" id="Resource_spk73"]
 script = ExtResource("2_7yxkc")
@@ -40,8 +41,7 @@ drag_vertical_enabled = true
 shape = SubResource("RectangleShape2D_kl8ac")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=526523245]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_en1of")
+texture = ExtResource("5_spk73")
 
 [node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1740131628]
 scale = Vector2(0.2, 0.2)
@@ -55,3 +55,7 @@ texture_scale = 0.5
 unique_name_in_owner = true
 script = ExtResource("6_6jj1d")
 metadata/_custom_type_script = "uid://cpiynq2d0sqkv"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=353313851]
+unique_name_in_owner = true
+stream = ExtResource("9_spk73")

@@ -3,17 +3,20 @@ class_name Enemy extends CharacterBody2D
 @export var avoidance_strength := 3000.0
 @export var stats: EnemyStats
 @export var moveset: Attack
+@export var step_distance := 15.0
 
 @onready var target: Node2D
 @onready var attention_area: Area2D = %AttentionArea
 @onready var hurtbox: Area2D = %Hurtbox
 @onready var _raycasts: Node2D = %Raycasts
 @onready var attack_timer: Timer
+@onready var audio: AudioStreamPlayer2D = %AudioStreamPlayer2D
 
 var in_darkness := true
 var speed: float
 var attack_speed: float
 var can_attack := false
+var distance_walked := 0.0
 
 func _ready() -> void:
 	speed = stats.base_speed
@@ -59,6 +62,12 @@ func _physics_process(delta: float) -> void:
 		look_at(target.global_position)
 		velocity = position.direction_to(target.global_position) * speed + calculate_avoidance_force() * delta
 		if position.distance_to(target.global_position) > 10:
+			if velocity.length() > 0.0:
+				distance_walked += velocity.length() * delta
+				if distance_walked > step_distance:
+					distance_walked = 0.0
+					audio.pitch_scale = randf_range(0.6, 1.1)
+					audio.play()
 			move_and_slide()
 	if can_attack:
 		attack()
