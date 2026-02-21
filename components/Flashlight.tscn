@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://dnkrepyyxlmt6"]
 
 [ext_resource type="Script" uid="uid://1e0qegviwjpk" path="res://components/flashlight.gd" id="1_0wgtv"]
-[ext_resource type="Texture2D" uid="uid://cxkmivou3isxw" path="res://assets/graphics/protolight.png" id="2_gnyuu"]
+[ext_resource type="Texture2D" uid="uid://dpagpp3bhce6f" path="res://assets/graphics/flashlight.png" id="2_0wgtv"]
 
 [node name="Flashlight" type="Area2D" unique_id=1885884908]
-collision_layer = 64
+collision_layer = 16
 collision_mask = 0
 script = ExtResource("1_0wgtv")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1534301651]
 unique_name_in_owner = true
 rotation = 1.5707964
+energy = 2.0
 shadow_enabled = true
-shadow_color = Color(0.37036464, 0.37036443, 0.37036446, 0)
+shadow_color = Color(0.16565654, 0.16565636, 0.16565636, 0)
 shadow_filter_smooth = 2.0
-texture = ExtResource("2_gnyuu")
-offset = Vector2(0, -24)
+texture = ExtResource("2_0wgtv")
+offset = Vector2(0, -28)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1838593402]
-position = Vector2(16, -6)
-polygon = PackedVector2Array(-8, 3, -3, 1, 6, 0, 16, -1, 20, -1, 22, 3, 22, 9, 21, 13, 16, 13, 6, 12, -3, 11, -8, 10)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=957507308]
+polygon = PackedVector2Array(4, -4, 30, -16, 44, -20, 49, -17, 52, -8, 52, 9, 48, 19, 42, 20, 20, 12, 4, 5)

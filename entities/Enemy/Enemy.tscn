@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://3qf48mygy3fw"]
+
+[ext_resource type="Script" uid="uid://4c4a0bscw8bd" path="res://entities/Enemy/enemy.gd" id="1_boy45"]
+[ext_resource type="Script" uid="uid://by7a8pb8ue38i" path="res://resources/enemy_stats.gd" id="2_qtvnq"]
+[ext_resource type="Resource" uid="uid://cn1krpe3v86ax" path="res://resources/attacks/base_attack.tres" id="3_7twge"]
+[ext_resource type="Texture2D" uid="uid://bet3wuiw4nwei" path="res://icon.svg" id="4_6f8ix"]
+[ext_resource type="PackedScene" uid="uid://dy4wrk0i4v75m" path="res://components/Hurtbox.tscn" id="5_3hsig"]
+[ext_resource type="PackedScene" uid="uid://mvh67gamvh60" path="res://components/HealthComponent.tscn" id="6_uye3c"]
+
+[sub_resource type="Resource" id="Resource_b6rq0"]
+script = ExtResource("2_qtvnq")
+metadata/_custom_type_script = "uid://by7a8pb8ue38i"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4qegb"]
+size = Vector2(10, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_faw0r"]
+radius = 120.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2eouu"]
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1181179293]
+script = ExtResource("1_boy45")
+stats = SubResource("Resource_b6rq0")
+moveset = ExtResource("3_7twge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=269773094]
+shape = SubResource("RectangleShape2D_4qegb")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2108944172]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_6f8ix")
+
+[node name="AttentionArea" type="Area2D" parent="." unique_id=232752587]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttentionArea" unique_id=2047009533]
+shape = SubResource("CircleShape2D_faw0r")
+
+[node name="Raycasts" type="Node2D" parent="." unique_id=132812432]
+unique_name_in_owner = true
+
+[node name="RayCast2D" type="RayCast2D" parent="Raycasts" unique_id=469801469]
+exclude_parent = false
+target_position = Vector2(10, -10)
+
+[node name="RayCast2D2" type="RayCast2D" parent="Raycasts" unique_id=1403817116]
+target_position = Vector2(10, 10)
+
+[node name="RayCast2D3" type="RayCast2D" parent="Raycasts" unique_id=2129237677]
+target_position = Vector2(23, 6)
+
+[node name="RayCast2D4" type="RayCast2D" parent="Raycasts" unique_id=405040744]
+target_position = Vector2(23, -6)
+
+[node name="Hurtbox" parent="." unique_id=1659303011 node_paths=PackedStringArray("health_component") instance=ExtResource("5_3hsig")]
+unique_name_in_owner = true
+collision_layer = 128
+collision_mask = 48
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=293673433]
+shape = SubResource("RectangleShape2D_2eouu")
+
+[node name="HealthComponent" parent="." unique_id=1837511731 instance=ExtResource("6_uye3c")]

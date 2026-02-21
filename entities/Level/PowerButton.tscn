@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dk1wse15baa4f"]
+
+[ext_resource type="Texture2D" uid="uid://co5ihve0f7rg6" path="res://assets/graphics/button.png" id="1_bdeia"]
+[ext_resource type="Script" uid="uid://ctv08oj7rtx2j" path="res://entities/Level/power_button.gd" id="1_d0d1v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d0d1v"]
+radius = 17.0
+
+[node name="PowerButton" type="Area2D" unique_id=1053051932]
+script = ExtResource("1_d0d1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=231346822]
+shape = SubResource("CircleShape2D_d0d1v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1688715817]
+texture = ExtResource("1_bdeia")

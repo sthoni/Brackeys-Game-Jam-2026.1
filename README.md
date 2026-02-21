@@ -6,13 +6,14 @@
 - [ ] Sounds Enemy
 - [ ] Sounds Player
 - [ ] Enemy und Player Particle
-- [ ] Wand-Sprites
+- [x] Wand-Sprites
 - [ ] Player-Sprite
 - [ ] Enemy-Sprite
-- [ ] Licht-Sprite
+- [x] Licht-Sprite
 - [ ] Ziel-Sprite
+- [ ] Schalter-Sprite
 - [ ] Erstes Level
-- [ ] Lebenspunkte
+- [x] Lebenspunkte
 - [ ] Langsamer laufen, wenn weniger Lebenspunkte
 - [ ] Schaden durch Gegner
 - [ ] Hindernisse

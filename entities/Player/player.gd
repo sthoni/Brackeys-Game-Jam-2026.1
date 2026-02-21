@@ -1,20 +1,28 @@
-class_name ProtoPlayer extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
-@export var speed := 200.0
-@export var stamina := 100.0
+var speed: float
+var stamina: float
+@export var stats: CharacterStats
 
-@onready var hitbox: Area2D = %Hitbox2
+@onready var health_component: HealthComponent = %HealthComponent
+@onready var hurtbox: Area2D = %Hurtbox
 var is_on_exit := false
 
 func _ready() -> void:
-	hitbox.area_entered.connect(func(area: Area2D) -> void:
+	health_component.init_health(stats.max_health)
+	speed = stats.base_speed
+	stamina = stats.base_stamina
+	hurtbox.area_entered.connect(func(area: Area2D) -> void:
 		print(area)
 		if area is ExitArea:
 			is_on_exit = true
 	)
-	hitbox.area_exited.connect(func(area: Area2D) -> void:
+	hurtbox.area_exited.connect(func(area: Area2D) -> void:
 		if area is ExitArea:
 			is_on_exit = false
+	)
+	health_component.health_changed.connect(func(health: int) -> void:
+		SignalBus.emit_signal("player_stats_changed", health, stamina)
 	)
 
 func get_input() -> void:

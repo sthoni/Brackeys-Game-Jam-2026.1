@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Attack" format=3 uid="uid://cn1krpe3v86ax"]
+
+[ext_resource type="PackedScene" uid="uid://b04ie1cm83xak" path="res://scenes/attacks/BaseAttack.tscn" id="1_2t4ba"]
+[ext_resource type="Script" uid="uid://dlxfrfw4nn72i" path="res://resources/attacks/attack.gd" id="1_vf2sd"]
+[ext_resource type="AudioStream" uid="uid://dhpi41h8sphw7" path="res://assets/sfx/hit.wav" id="3_sxyuw"]
+
+[resource]
+script = ExtResource("1_vf2sd")
+damage = 1
+hitbox_scene = ExtResource("1_2t4ba")
+sound = ExtResource("3_sxyuw")
+metadata/_custom_type_script = "uid://dlxfrfw4nn72i"

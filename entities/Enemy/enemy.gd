@@ -1,32 +1,49 @@
 class_name Enemy extends CharacterBody2D
 
-@export var max_speed := 40.0
-@export var min_speed := 0.0
 @export var avoidance_strength := 3000.0
-var current_speed: float
+@export var stats: EnemyStats
+@export var moveset: Attack
 
 @onready var target: Node2D
 @onready var attention_area: Area2D = %AttentionArea
-@onready var hitbox: Area2D = %Hitbox
+@onready var hurtbox: Area2D = %Hurtbox
 @onready var _raycasts: Node2D = %Raycasts
+@onready var attack_timer: Timer
 
 var in_darkness := true
+var speed: float
+var attack_speed: float
+var can_attack := false
 
 func _ready() -> void:
-	current_speed = max_speed
+	speed = stats.base_speed
+	attack_speed = stats.base_attack_speed
+	attack_timer = Timer.new()
+	attack_timer.one_shot = true
+	attack_timer.wait_time = attack_speed
+	add_child(attack_timer)
+
 	attention_area.body_entered.connect(func(body: Node2D) -> void:
-		if body is ProtoPlayer:
+		if body is Player:
 			target = body
 	)
 	attention_area.body_exited.connect(func(body: Node2D) -> void:
-		if body is ProtoPlayer:
+		if body is Player:
 			target = null
 	)
-	hitbox.area_entered.connect(func(area: Area2D) -> void:
+	hurtbox.area_entered.connect(func(area: Area2D) -> void:
 		if area is Flashlight:
 			in_darkness = false
 	)
-	hitbox.area_exited.connect(func(area: Area2D) -> void:
+	hurtbox.body_entered.connect(func(body: Node2D) -> void:
+		if body is Player:
+			can_attack = true
+	)
+	hurtbox.body_exited.connect(func(body: Node2D) -> void:
+		if body is Player:
+			can_attack = false
+	)
+	hurtbox.area_exited.connect(func(area: Area2D) -> void:
 		if area is Flashlight:
 			in_darkness = true
 	)
@@ -34,14 +51,16 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	if not in_darkness:
-		current_speed = lerp(current_speed, min_speed, 0.05)
+		speed = lerp(speed, 0.0, 0.05)
 	else:
-		current_speed = lerp(current_speed, max_speed, 0.2)
+		speed = lerp(speed, stats.base_speed, 0.2)
 	if target:
 		look_at(target.global_position)
-		velocity = position.direction_to(target.global_position) * current_speed + calculate_avoidance_force() * delta
+		velocity = position.direction_to(target.global_position) * speed + calculate_avoidance_force() * delta
 		if position.distance_to(target.global_position) > 10:
 			move_and_slide()
+	if can_attack:
+		attack()
 
 func calculate_avoidance_force() -> Vector2:
 	var avoidance_force := Vector2.ZERO
@@ -55,3 +74,16 @@ func calculate_avoidance_force() -> Vector2:
 			var force := direction_away_from_obstacle * intensity
 			avoidance_force += force
 	return avoidance_force * avoidance_strength
+
+func attack() -> void:
+	if not attack_timer.is_stopped():
+		return
+	attack_timer.start()
+	var attack_hitbox: Hitbox = moveset.hitbox_scene.instantiate()
+	attack_hitbox.damage = moveset.damage
+	add_child(attack_hitbox)
+	attack_hitbox.position = moveset.offset
+	SoundManager.play_sfx(moveset.sound, 0.9)
+	await get_tree().create_timer(moveset.attack_duration).timeout
+	if is_instance_valid(attack):
+		attack_hitbox.queue_free()
