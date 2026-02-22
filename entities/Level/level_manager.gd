@@ -1,6 +1,6 @@
 class_name LevelManager extends Node2D
 
-@export var levels: Array[PackedScene] = [preload("res://scenes/Level_1.tscn"), preload("res://scenes/Level_2.tscn"), preload("res://scenes/Level_3.tscn"), preload("res://scenes/Level_4.tscn"), preload("res://scenes/Level_5.tscn")]
+@export var levels: Array[PackedScene] = [preload("res://scenes/Level_1.tscn"), preload("res://scenes/Level_2.tscn"), preload("res://scenes/Level_3.tscn"), preload("res://scenes/Level_5.tscn")]
 
 var current_level: Level
 var level_count: int = 0

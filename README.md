@@ -21,12 +21,12 @@
 
 Sonntag
 
-- [ ] Erklärung
-- [ ] Start-Bildschirm (Farbverlauf + Sprite mit Licht)
-- [ ] End-Bildschirm
-- [ ] itch.io-Seite (Cover 630x500)
-- [ ] Screenshots
-- [ ] Steuerung-Anweisung (Auf Maus hinweisen)
+- [x] Erklärung
+- [x] Start-Bildschirm (Farbverlauf + Sprite mit Licht)
+- [x] End-Bildschirm
+- [x] itch.io-Seite (Cover 630x500)
+- [x] Screenshots
+- [x] Steuerung-Anweisung (Auf Maus hinweisen)
 
 ## Stretch-Goals
 

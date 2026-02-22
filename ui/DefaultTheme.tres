@@ -1,7 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://sn7rphs2juvi"]
 
 [ext_resource type="FontFile" uid="uid://cnte6wmem5bo2" path="res://assets/fonts/PixelOperator8.ttf" id="1_c8k34"]
-[ext_resource type="Texture2D" uid="uid://5f4ymbvqd3cu" path="res://assets/player/background.png" id="2_t0710"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nbat1"]
 content_margin_left = 8.0
@@ -35,8 +34,17 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
+[sub_resource type="Gradient" id="Gradient_c8k34"]
+offsets = PackedFloat32Array(0, 0.6686747)
+colors = PackedColorArray(0.61960787, 0.15686275, 0.20784314, 1, 0.24705882, 0.15686275, 0.19607843, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_t0710"]
+gradient = SubResource("Gradient_c8k34")
+fill = 1
+fill_from = Vector2(0, 0.65652174)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d3r0c"]
-texture = ExtResource("2_t0710")
+texture = SubResource("GradientTexture2D_t0710")
 
 [resource]
 default_font_size = 8

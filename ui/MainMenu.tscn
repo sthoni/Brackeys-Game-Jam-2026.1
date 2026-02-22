@@ -1,6 +1,15 @@
 [gd_scene format=3 uid="uid://c5kaix1e8owld"]
 
 [ext_resource type="Script" uid="uid://dp8jeacwvtmh4" path="res://ui/main_menu.gd" id="1_b00nv"]
+[ext_resource type="Texture2D" uid="uid://ck3squn2ushsl" path="res://assets/graphics/wires.png" id="2_qo3sn"]
+[ext_resource type="Texture2D" uid="uid://dpagpp3bhce6f" path="res://assets/graphics/flashlight.png" id="2_rn8js"]
+[ext_resource type="Texture2D" uid="uid://co5ihve0f7rg6" path="res://assets/graphics/button.png" id="2_x262b"]
+[ext_resource type="Texture2D" uid="uid://cnf2yte34ele0" path="res://assets/graphics/player.png" id="3_qo3sn"]
+[ext_resource type="Texture2D" uid="uid://ch5mtarxh6h5b" path="res://assets/graphics/enemy.png" id="5_g5fyd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5fyd"]
+atlas = ExtResource("2_qo3sn")
+region = Rect2(4.4340515, 4.2006493, 20.638115, 22.849342)
 
 [node name="MainMenu" type="Control" unique_id=1477814482]
 layout_mode = 3
@@ -49,16 +58,57 @@ text = "Light the darkness!"
 layout_mode = 2
 theme_override_constants/separation = 8
 
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=924483697]
+layout_mode = 2
+text = "WASD: Movement
+F: Interact
+Mouse: Flashlight"
+
 [node name="StartButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1451187953]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Start Game"
 
-[node name="ControlsButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=536755295]
-layout_mode = 2
-text = "Controls"
+[node name="TextureRect5" type="TextureRect" parent="." unique_id=128718533]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 8.0
+offset_right = 343.0
+offset_bottom = 48.0
+texture = SubResource("AtlasTexture_g5fyd")
 
-[node name="QuitButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1918934854]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Quit Game"
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1011739833]
+layout_mode = 0
+offset_left = 289.0
+offset_top = 29.0
+offset_right = 329.0
+offset_bottom = 69.0
+texture = ExtResource("2_x262b")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=576082492]
+layout_mode = 0
+offset_left = 255.00003
+offset_top = 173.00002
+offset_right = 295.00003
+offset_bottom = 213.00002
+rotation = -1.3353287
+texture = ExtResource("3_qo3sn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1639102097]
+layout_mode = 0
+offset_left = 262.00003
+offset_top = 72.000015
+offset_right = 310.00003
+offset_bottom = 120.00002
+rotation = 0.22742024
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_rn8js")
+
+[node name="TextureRect4" type="TextureRect" parent="." unique_id=1135575934]
+layout_mode = 0
+offset_left = -15.000002
+offset_top = 141.99998
+offset_right = 24.999998
+offset_bottom = 181.99998
+rotation = -0.24143127
+texture = ExtResource("5_g5fyd")
