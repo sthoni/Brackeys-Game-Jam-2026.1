@@ -275,7 +275,7 @@ tile_set = SubResource("TileSet_sv41r")
 
 [node name="ExitArea" parent="." unique_id=190963240 instance=ExtResource("5_sx87u")]
 unique_name_in_owner = true
-position = Vector2(497, 317)
+position = Vector2(494, 323)
 
 [node name="Player" parent="." unique_id=288240515 instance=ExtResource("6_k3h0j")]
 position = Vector2(241, 178)
