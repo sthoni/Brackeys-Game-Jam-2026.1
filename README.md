@@ -22,11 +22,11 @@
 Sonntag
 
 - [ ] Erklärung
-- [ ] Start-Bildschirm
+- [ ] Start-Bildschirm (Farbverlauf + Sprite mit Licht)
 - [ ] End-Bildschirm
-- [ ] itch.io-Seite
+- [ ] itch.io-Seite (Cover 630x500)
 - [ ] Screenshots
-- [ ] Steuerung-Anweisung
+- [ ] Steuerung-Anweisung (Auf Maus hinweisen)
 
 ## Stretch-Goals
 
