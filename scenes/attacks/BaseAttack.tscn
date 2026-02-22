@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b04ie1cm83xak"]
 
 [ext_resource type="Script" uid="uid://b6grch1ph8eke" path="res://components/hitbox.gd" id="1_3u4bf"]
+[ext_resource type="Texture2D" uid="uid://btoko7o7hp8vc" path="res://assets/graphics/light_pixel.png" id="2_wsni3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3u4bf"]
 size = Vector2(55, 20)
@@ -13,3 +14,8 @@ metadata/_custom_type_script = "uid://b6grch1ph8eke"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=867831347]
 shape = SubResource("RectangleShape2D_3u4bf")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=124169117]
+energy = 10.0
+texture = ExtResource("2_wsni3")
+texture_scale = 50.0

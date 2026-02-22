@@ -2,12 +2,12 @@
 
 ## TODO
 
-- [ ] Musik
+- [x] Musik
 - [x] Sounds Enemy
 - [x] Sounds Player
 - [x] Wand-Sprites
 - [x] Player-Sprite
-- [ ] Enemy-Sprite
+- [x] Enemy-Sprite
 - [x] Licht-Sprite
 - [x] Ziel-Sprite
 - [x] Schalter-Sprite
@@ -15,9 +15,7 @@
 - [x] Lebenspunkte
 - [x] Langsamer laufen, wenn weniger Lebenspunkte
 - [x] Schaden durch Gegner
-- [ ] Hindernisse
-- [ ] Wechsel zum zweiten Level
-- [ ] UI für Leben und Batterie
+- [x] Wechsel zum zweiten Level
 - [x] Pause entfernen
 - [x] Upload itch.io
 

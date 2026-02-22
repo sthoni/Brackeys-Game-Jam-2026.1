@@ -7,6 +7,7 @@
 [resource]
 script = ExtResource("1_vf2sd")
 damage = 1
+attack_duration = 0.2
 hitbox_scene = ExtResource("1_2t4ba")
 sound = ExtResource("3_sxyuw")
 metadata/_custom_type_script = "uid://dlxfrfw4nn72i"

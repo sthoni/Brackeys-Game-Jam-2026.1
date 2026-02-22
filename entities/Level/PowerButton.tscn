@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://ctv08oj7rtx2j" path="res://entities/Level/power_button.gd" id="1_d0d1v"]
 [ext_resource type="Texture2D" uid="uid://btoko7o7hp8vc" path="res://assets/graphics/light_pixel.png" id="3_qobuo"]
 [ext_resource type="PackedScene" uid="uid://dbrgobckeje6e" path="res://entities/Level/interactable_area.tscn" id="4_wet74"]
+[ext_resource type="AudioStream" uid="uid://dmbbjh3rf7elt" path="res://assets/sfx/button.wav" id="5_0iaia"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wet74"]
 radius = 24.0
@@ -24,3 +25,7 @@ unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableArea" unique_id=1964617816]
 shape = SubResource("CircleShape2D_wet74")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=944496516]
+unique_name_in_owner = true
+stream = ExtResource("5_0iaia")

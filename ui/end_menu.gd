@@ -1,7 +1,7 @@
 class_name EndMenu extends Control
 
 @onready var restart_button: Button = %RestartButton
-@onready var next_level: PackedScene = preload("res://scenes/Level.tscn")
+@onready var next_level: PackedScene = preload("res://entities/Level/LevelManager.tscn")
 
 func _ready() -> void:
 	restart_button.pressed.connect(func() -> void:

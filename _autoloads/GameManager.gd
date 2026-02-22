@@ -8,7 +8,7 @@ enum GameState {
 
 var GameScenes := {
 	GameState.MAIN_MENU: preload("res://ui/MainMenu.tscn"),
-	GameState.IN_GAME: preload("res://scenes/Level.tscn"),
+	GameState.IN_GAME: preload("res://entities/Level/LevelManager.tscn"),
 	GameState.GAME_OVER: preload("res://ui/EndMenu.tscn")
 }
 
@@ -23,7 +23,12 @@ func _ready() -> void:
 	elif get_tree().current_scene == GameScenes[GameState.IN_GAME]:
 		current_game_state = GameState.IN_GAME
 	game_state_changed.emit(current_game_state)
-	# SoundManager.play_music(load("res://assets/music/theme.wav"))
+	SoundManager.play_music(load("res://assets/music/theme.wav"))
+	game_state_changed.connect(func(new_game_state: GameState) -> void:
+		if new_game_state == GameState.GAME_OVER:
+			change_scene(GameScenes[GameState.GAME_OVER])
+	)
+
 
 
 func _process(_delta: float) -> void:

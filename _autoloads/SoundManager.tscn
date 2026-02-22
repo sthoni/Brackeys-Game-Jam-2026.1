@@ -6,13 +6,19 @@
 script = ExtResource("1_o7edi")
 
 [node name="SFXPool_1" type="AudioStreamPlayer" parent="." unique_id=242891169]
+volume_db = -20.0
 
 [node name="SFXPool_2" type="AudioStreamPlayer" parent="." unique_id=1539354830]
+volume_db = -20.0
 
 [node name="SFXPool_3" type="AudioStreamPlayer" parent="." unique_id=2088119207]
+volume_db = -20.0
 
 [node name="SFXPool_4" type="AudioStreamPlayer" parent="." unique_id=465410226]
+volume_db = -20.0
 
 [node name="SFXPool_5" type="AudioStreamPlayer" parent="." unique_id=639051583]
+volume_db = -20.0
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=337843205]
+volume_db = -20.0
